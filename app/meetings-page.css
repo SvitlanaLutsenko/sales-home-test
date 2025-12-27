@@ -1,0 +1,369 @@
+/* Meetings Page Specific Styles */
+
+.meetings-layout {
+  display: flex;
+  gap: 24px;
+  padding: 0 114px 32px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
+.meetings-content {
+  flex: 1;
+  min-width: 0;
+  background-color: var(--colorNeutralBackground1);
+  border-radius: 28px;
+  padding: 20px 24px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.14);
+}
+
+/* Header */
+.meetings-header {
+  margin-bottom: 32px;
+  padding-top: 0;
+}
+
+.meetings-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.meetings-title {
+  font-family: 'Segoe UI Variable', 'Segoe UI', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 36px;
+  color: #313a59;
+  margin: 0;
+}
+
+.open-calendar-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--colorNeutralForeground2);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.open-calendar-btn:hover {
+  background-color: var(--colorNeutralBackground3);
+}
+
+/* Sections */
+.upcoming-section,
+.recent-section {
+  margin-bottom: 32px;
+}
+
+.section-heading {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--colorNeutralForeground1);
+  margin: 0 0 12px 0;
+}
+
+.section-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.section-count {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--colorNeutralForeground1);
+  margin: 0;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pagination-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--colorNeutralForeground2);
+}
+
+.pagination-btn:hover:not(.disabled) {
+  background-color: var(--colorNeutralBackground3);
+}
+
+.pagination-btn.disabled {
+  color: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.pagination-text {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--colorNeutralForeground1);
+  margin: 0 4px;
+}
+
+/* Meeting Cards */
+.upcoming-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.meeting-card {
+  background: white;
+  border: 1px solid var(--colorNeutralStroke2);
+  border-radius: 24px;
+  padding: 20px;
+  display: flex;
+  gap: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-status-bar {
+  width: 4px;
+  height: 100%;
+  background-color: #464feb;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.card-status-bar.striped {
+  background: repeating-linear-gradient(
+    45deg,
+    #3d3e78,
+    #3d3e78 4px,
+    transparent 4px,
+    transparent 8px
+  );
+}
+
+.card-content {
+  flex: 1;
+  padding-left: 8px;
+}
+
+.meeting-title {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--colorNeutralForeground1);
+  margin: 0 0 4px 0;
+  padding-left: 4px;
+}
+
+.meeting-time {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--colorNeutralForeground2);
+  margin: 0 0 8px 0;
+  padding-left: 4px;
+}
+
+.meeting-time-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
+.teams-link {
+  font-size: 12px;
+  color: var(--colorNeutralForeground3);
+  text-decoration: underline;
+}
+
+.teams-link:hover {
+  color: var(--colorNeutralForeground1);
+}
+
+.meeting-meta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  padding-left: 4px;
+  margin-bottom: 12px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--colorNeutralForeground1);
+}
+
+.meta-avatar {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.meta-count {
+  font-size: 8px;
+  color: var(--colorNeutralForeground3);
+  background: white;
+  border: 2px solid var(--colorNeutralBackground2);
+  border-radius: 12px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -8px;
+}
+
+.meta-icon {
+  color: #464feb;
+}
+
+.meta-separator {
+  font-size: 10px;
+  color: var(--colorNeutralForeground2);
+  margin: 0 2px;
+}
+
+/* Highlights Section */
+.highlights-section {
+  margin-top: 12px;
+}
+
+.highlights-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 8px;
+  padding-left: 6px;
+}
+
+.highlights-title {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--colorNeutralForeground1);
+}
+
+.highlights-list {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), 
+              linear-gradient(90deg, rgb(235, 239, 255) 0%, rgb(235, 239, 255) 100%);
+  border-radius: 16px;
+  padding: 12px 8px 16px 4px;
+  margin: 0;
+  list-style-position: inside;
+}
+
+.highlights-list li {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--colorNeutralForeground1);
+  margin-bottom: 6px;
+  margin-left: 21px;
+}
+
+.highlights-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Recent Cards */
+.recent-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.meeting-card.recent {
+  padding: 20px;
+}
+
+/* Section Groups */
+.section-group {
+  margin-bottom: 16px;
+}
+
+.section-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.toggle-icon {
+  color: var(--colorNeutralForeground1);
+  transition: transform 0.2s;
+}
+
+.section-toggle.collapsed .toggle-icon {
+  transform: rotate(-90deg);
+}
+
+/* Links */
+.section-link {
+  font-size: 12px;
+  line-height: 16px;
+  color: #464feb;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.section-link:hover {
+  text-decoration: underline;
+}
+
+/* Tab content placeholder for other tabs */
+.tab-content-placeholder {
+  padding: var(--spacingVerticalXXL) var(--spacingHorizontalXXL);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .upcoming-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .meetings-content {
+    padding: 0 var(--spacingHorizontalL);
+  }
+}

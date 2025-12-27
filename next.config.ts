@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/vibe-coding-template',
-  assetPrefix: '/vibe-coding-template',
+  basePath: isProd ? '/vibe-coding-template' : '',
+  assetPrefix: isProd ? '/vibe-coding-template' : '',
   trailingSlash: true,
   images: {
     unoptimized: true,
